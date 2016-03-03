@@ -22,9 +22,7 @@ class SplashView extends Component {
       <View style={styles.container}>
         <View style={styles.viewContainer}>
           <View style={styles.logoImageContainer}>
-            <Image style={styles.logoImage}>
-              source={require('image!logo_new')}
-            </Image>
+            <Image style={styles.logoImage} source={require('image!logo_new')}/>
           </View>
           <View style={styles.textLabelContainer}>
             <Text style={{color: 'green',fontStyle: "italic",}}>
