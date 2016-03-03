@@ -4,11 +4,8 @@
 import React, {AppRegistry, Navigator, StyleSheet, Text, View} from 'react-native'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
-
+import ProgressBarAndroid from 'ProgressBarAndroid'
 export function requireMaskComponent(Component) {
-
-
     class MaskWrapComponent extends React.Component {
         render() {
             return (
@@ -28,6 +25,7 @@ export function requireMaskComponent(Component) {
                             ?
                             <View style={styles.maskBox}>
                                 <View style={styles.indicatorBox}>
+                                <ProgressBarAndroid style={{color: 'green',styleAttr: "Large",}}/>
                                     <View style={styles.labelBox}>
                                         <Text style={styles.messageLabel}>{this.props.loadingMessage}</Text>
                                     </View>
@@ -76,7 +74,7 @@ export function requireMaskComponent(Component) {
             fontWeight: 'bold',
             color: '#190707',
             textAlign:'center',
-        }
+        },
     });
     const mapStateToProps = (state) => ({
         'isFetching': state.app.isFetching,
